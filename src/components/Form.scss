@@ -1,0 +1,13 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__save{
+    margin: 20px auto;
+    border: 1px solid blue;
+    width: max-content;
+    border-radius: 12px;
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+}
