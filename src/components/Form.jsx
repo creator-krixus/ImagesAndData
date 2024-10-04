@@ -58,8 +58,11 @@ function Form() {
       const urls = [];
 
       for (const archivo of archivos) {
-        // Subir cada imagen
-        const refArchivo = ref(storage, `clientes/${archivo.name}`);
+        // Generar un nombre único para cada archivo
+        const uniqueFileName = `${Date.now()}_${archivo.name}`;
+
+        // Subir cada imagen con el nombre único
+        const refArchivo = ref(storage, `clientes/${uniqueFileName}`);
         await uploadBytes(refArchivo, archivo);
         const url = await getDownloadURL(refArchivo);
         urls.push(url); // Guardar URL de cada imagen
@@ -83,11 +86,11 @@ function Form() {
       setNombresArchivos('Seleccionar imagen(es)');
       setArchivos([]);
       setHabilitar(false);
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <div className="form">
