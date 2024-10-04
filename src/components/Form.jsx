@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import credentials from "../config/configfireBase";
+import credentials from "../config/configFireBase";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import './Form.scss';
