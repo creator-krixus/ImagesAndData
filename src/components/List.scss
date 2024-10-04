@@ -24,4 +24,24 @@
     margin: 5px;
     border-radius:12px;
   }
+  &__btns{
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  &__btn{
+    border: 1px solid rgb(18, 117, 18);
+    background: rgb(18, 117, 18);
+    color: #fff;
+    width: max-content;
+    border-radius: 8px;
+    padding: 5px 12px;
+    cursor: pointer;
+    &:hover{
+      background: #fff;
+      color: rgb(18, 117, 18);
+      border: 1px solid rgb(18, 117, 18);
+    }
+  }
 }

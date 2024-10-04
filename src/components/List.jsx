@@ -106,8 +106,8 @@ function List() {
               <p className="list__info">{client.email}</p>
               <p className="list__info">{client.web}</p>
               <div className="list__btns">
-                <button onClick={() => { getClient(client.id) }}>editar</button>
-                <button onClick={() => deleteClient(client.id)}>eliminar</button>
+                <button className="list__btn" onClick={() => { getClient(client.id) }}>Editar</button>
+                <button className="list__btn" onClick={() => deleteClient(client.id)}>Eliminar</button>
               </div>
             </div>
           </div>
