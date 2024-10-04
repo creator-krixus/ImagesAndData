@@ -1,34 +1,42 @@
-.form{
+.formEdit {
   display: flex;
   flex-direction: column;
-  &__title{
+  position: absolute;
+  top: 0;
+  left: -5px;
+  background-color: #8c9a95;
+  width: 100%;
+  height: 10000px;
+  &__title {
     text-align: center;
   }
-  &__data{
-    width: 100%;
+
+  &__data {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 0 auto;
   }
-  &__files{
+
+  &__files {
     position: relative;
     display: inline-block;
     color: rgb(129, 126, 126);
     cursor: pointer;
-    margin: 0 12px;
+    margin: 0 0 0 12px;
     padding: 2px 6px;
     border-radius: 6px;
     border: 1px solid lightgray;
     font-size: 13px;
     height: 22px;
   }
-  &__item{
+
+  &__item {
+    text-align: left;
     margin: 0 12px;
-    padding: 6px;
     border-radius: 6px;
-    border: 1px solid lightgray;
   }
+
   &__upload {
     display: inline-block;
     color: rgb(129, 126, 126);
@@ -38,15 +46,18 @@
     width: 100%;
     height: 100%;
   }
+
   &__names {
     position: absolute;
     top: 0;
     z-index: 10;
     font-size: 14px;
     color: #5d5b5b;
+    left: 15px;
   }
-  &__save{
-    margin: 20px auto;
+
+  &__save {
+    margin: 20px 10px;
     border: 1px solid rgb(18, 117, 18);
     background: rgb(18, 117, 18);
     color: #fff;
@@ -54,22 +65,43 @@
     border-radius: 12px;
     padding: 5px 12px;
     cursor: pointer;
-    &:hover{
+    &:hover {
       background: #fff;
       color: rgb(18, 117, 18);
       border: 1px solid rgb(18, 117, 18);
     }
   }
-  @media (min-width:768px) {
-    &__data{
+
+  @media (min-width: 768px) {
+    &__data {
       width: 720px;
       display: flex;
       flex-direction: column;
       gap: 15px;
       padding: 20px;
     }
+    &__files {
+      margin: 0 12px 0 12px;
+    }
   }
+
   input[type="file"] {
     display: none;
+  }
+
+  /* Estilos para los inputs */
+  input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
+    border: none; /* Quitar el borde de los inputs */
+    outline: none; /* Quitar el outline cuando se hace focus */
+    background-color: #f0f0f0; /* Opción de darle un color de fondo para diferenciar los campos */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 97%;
+  }
+
+  input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus {
+    background-color: #e0e0e0; /* Cambiar el color de fondo al hacer focus, si se desea */
+  }
 }
-}
+
